@@ -17,27 +17,31 @@
         console.log(age);
 
         if (age >= 21) {
-          console.log = ("You can enter the venue and purchase alcohol.");
-        } else if (age >= 19) {
-          console.log = ("You can enter the venue but cannot purchase alcohol.");
-        } else {
-          console.log = ("You cannot enter the venue.");
-        }
+        console.log("You can enter the venue and purchase alcohol.");
+      } else if (age >= 19) {
+        console.log("You can enter the venue but cannot purchase alcohol.");
+      } else {
+        console.log("You cannot enter the venue.");
+      }
 
       // Task 2
 
       let birthYear = prompt("Please enter your birth year");
+      birthYear = Number(birthYear);
       let currentYear = 2024;
-      let Age = currentYear - birthYear;
+      let calculatedAge = currentYear - birthYear;
 
-      console.log("Your age is: " + age);
+      console.log("Your age is: " + calculatedAge);
 
       // Task 3
-      
-      let expression = prompt("Please enter a mathematical expression");
-      let result = eval(expression);
 
-      console.log("The result is: " + result);
+      let expression = prompt("Please enter a mathematical expression");
+      try {
+        let result = eval(expression);
+        console.log("The result is: " + result);
+      } catch {
+        console.log("Invalid expresion");
+      }
     </script>
   </body>
 </html>
